@@ -1,27 +1,26 @@
-with stg_customer as (
-    select
-        customerid,
-        personid,
-        storeid
-    from {{ ref('customer') }}
-),
+with
+    stg_customer as (select customerid, personid, storeid from {{ ref("customer") }}),
 
-stg_person as (
-    select
-        businessentityid,
-        concat(coalesce(firstname, ''), ' ', coalesce(middlename, ''), ' ', coalesce(lastname, '')) as fullname
-    from {{ ref('person') }}
-),
+    stg_person as (
+        select
+            businessentityid,
+            concat(
+                coalesce(firstname, ''),
+                ' ',
+                coalesce(middlename, ''),
+                ' ',
+                coalesce(lastname, '')
+            ) as fullname
+        from {{ ref("person") }}
+    ),
 
-stg_store as (
-    select
-        businessentityid as storebusinessentityid,
-        storename
-    from {{ ref('store') }}
-)
+    stg_store as (
+        select businessentityid as storebusinessentityid, storename
+        from {{ ref("store") }}
+    )
 
 select
-    {{ dbt_utils.generate_surrogate_key(['stg_customer.customerid']) }} as customer_key,
+    {{ dbt_utils.generate_surrogate_key(["stg_customer.customerid"]) }} as customer_key,
     stg_customer.customerid,
     stg_person.businessentityid,
     stg_person.fullname,

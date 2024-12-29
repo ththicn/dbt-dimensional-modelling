@@ -1,27 +1,27 @@
-version: 2 
+version: 2
 
-seeds: 
+seeds:
   - name: product
-    config: 
+    config:
       schema: production
-      column_types: 
+      column_types:
         productid: integer
-        name: varchar
-        safetystocklevel: smallint
-        finishedgoodsflag: boolean 
-        class: varchar
+        name: string
+        safetystocklevel: integer
+        finishedgoodsflag: boolean
+        class: string
         makeflag: boolean
-        productnumber: varchar
-        reorderpoint: smallint
+        productnumber: string
+        reorderpoint: integer
         modifieddate: timestamp
-        rowguid: varchar
+        rowguid: string
         productmodelid: integer
-        weightunitmeasurecode: varchar
+        weightunitmeasurecode: string
         standardcost: numeric
         productsubcategoryid: integer
         listprice: numeric
         daystomanufacture: integer
-        productline: varchar
-        color: varchar
+        productline: string
+        color: string
         sellstartdate: timestamp
         weight: numeric

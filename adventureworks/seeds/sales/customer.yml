@@ -1,12 +1,11 @@
-version: 2 
+version: 2
 
-seeds: 
+seeds:
   - name: customer
-    config: 
+    config:
       schema: sales
-      column_types: 
+      column_types:
         customerid: integer
         personid: integer
         storeid: integer
         territoryid: integer
-
