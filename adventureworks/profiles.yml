@@ -2,10 +2,10 @@ adventureworks:
   target: duckdb
   outputs:
     duckdb:
-     type: duckdb
-     path: target/adventureworks.duckdb
-     threads: 12
-    postgres:  
+      type: duckdb
+      path: target/adventureworks.duckdb
+      threads: 12
+    postgres:
       type: postgres
       host: localhost
       user: postgres
@@ -14,3 +14,9 @@ adventureworks:
       dbname: adventureworks
       schema: dbo
       threads: 12
+    bigquery:
+      type: bigquery
+      method: oauth
+      project: ththicn-dev
+      dataset: adventureworks
+      threads: 1
