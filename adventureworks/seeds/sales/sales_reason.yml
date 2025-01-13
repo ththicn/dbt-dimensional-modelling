@@ -1,0 +1,11 @@
+version: 2
+
+seeds:
+  - name: sales_reason
+    config:
+      schema: sales
+      column_types:
+        sales_reason_id: integer
+        name: string
+        reason_type: string
+        modified_date: timestamp

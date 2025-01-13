@@ -5,7 +5,7 @@ seeds:
     config:
       schema: sales
       column_types:
-        customerid: integer
-        personid: integer
-        storeid: integer
-        territoryid: integer
+        customer_id: integer
+        person_id: integer
+        store_id: integer
+        territory_id: integer

@@ -5,7 +5,7 @@ seeds:
     config:
       schema: sales
       column_types:
-        businessentityid: integer
-        storename: string
-        salespersonid: integer
-        modifieddate: timestamp
+        business_entity_id: integer
+        store_name: string
+        sales_person_id: integer
+        modified_date: timestamp

@@ -1,4 +1,4 @@
-creditcardid,cardtype,expyear,modifieddate,expmonth,cardnumber
+credit_card_id,card_type,exp_year,modified_date,exp_month,card_number
 1,SuperiorCard,2006,2013-07-29 00:00:00,11,33332664695310
 2,Distinguish,2005,2013-12-05 00:00:00,8,55552127249722
 3,ColonialVoice,2005,2014-01-14 00:00:00,7,77778344838353

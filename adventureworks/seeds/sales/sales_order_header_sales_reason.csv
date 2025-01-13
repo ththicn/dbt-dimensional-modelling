@@ -1,4 +1,4 @@
-salesorderid,modifieddate,salesreasonid
+sales_order_id,modified_date,sales_reason_id
 43697,2011-05-31 00:00:00,5
 43697,2011-05-31 00:00:00,9
 43702,2011-06-01 00:00:00,5
