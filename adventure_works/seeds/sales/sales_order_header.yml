@@ -26,6 +26,6 @@ seeds:
         due_date: timestamp
         total_due: numeric
         customer_id: integer
-        salesperson_id: integer
+        sales_person_id: integer
         ship_date: timestamp
         account_number: string
