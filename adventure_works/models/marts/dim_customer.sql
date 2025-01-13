@@ -12,7 +12,7 @@ with
                 coalesce(middle_name, ''),
                 ' ',
                 coalesce(last_name, '')
-            ) as fullname
+            ) as full_name
         from {{ ref("person") }}
     ),
 
