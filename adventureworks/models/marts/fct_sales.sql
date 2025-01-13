@@ -1,44 +1,44 @@
 with
-    stg_salesorderheader as (
+    stg__sales_order_header as (
         select
-            salesorderid,
-            customerid,
-            creditcardid,
-            shiptoaddressid,
+            sales_order_id,
+            customer_id,
+            credit_card_id,
+            ship_to_address_id,
             status as order_status,
-            cast(orderdate as date) as orderdate
-        from {{ ref("salesorderheader") }}
+            cast(order_date as date) as order_date
+        from {{ ref("sales_order_header") }}
     ),
 
-    stg_salesorderdetail as (
+    stg__sales_order_detail as (
         select
-            salesorderid,
-            salesorderdetailid,
-            productid,
-            orderqty,
-            unitprice,
-            unitprice * orderqty as revenue
-        from {{ ref("salesorderdetail") }}
+            sales_order_id,
+            sales_order_detail_id,
+            product_id,
+            order_qty,
+            unit_price,
+            unit_price * order_qty as revenue
+        from {{ ref("sales_order_detail") }}
     )
 
 select
     {{
         dbt_utils.generate_surrogate_key(
-            ["stg_salesorderdetail.salesorderid", "salesorderdetailid"]
+            ["stg__sales_order_detail.sales_order_id", "sales_order_detail_id"]
         )
     }} as sales_key,
-    {{ dbt_utils.generate_surrogate_key(["productid"]) }} as product_key,
-    {{ dbt_utils.generate_surrogate_key(["customerid"]) }} as customer_key,
-    {{ dbt_utils.generate_surrogate_key(["creditcardid"]) }} as creditcard_key,
-    {{ dbt_utils.generate_surrogate_key(["shiptoaddressid"]) }} as ship_address_key,
+    {{ dbt_utils.generate_surrogate_key(["product_id"]) }} as product_key,
+    {{ dbt_utils.generate_surrogate_key(["customer_id"]) }} as customer_key,
+    {{ dbt_utils.generate_surrogate_key(["credit_card_id"]) }} as credit_card_key,
+    {{ dbt_utils.generate_surrogate_key(["ship_to_address_id"]) }} as ship_address_key,
     {{ dbt_utils.generate_surrogate_key(["order_status"]) }} as order_status_key,
-    {{ dbt_utils.generate_surrogate_key(["orderdate"]) }} as order_date_key,
-    stg_salesorderdetail.salesorderid,
-    stg_salesorderdetail.salesorderdetailid,
-    stg_salesorderdetail.unitprice,
-    stg_salesorderdetail.orderqty,
-    stg_salesorderdetail.revenue
-from stg_salesorderdetail
+    {{ dbt_utils.generate_surrogate_key(["order_date"]) }} as order_date_key,
+    stg__sales_order_detail.sales_order_id,
+    stg__sales_order_detail.sales_order_detail_id,
+    stg__sales_order_detail.unit_price,
+    stg__sales_order_detail.order_qty,
+    stg__sales_order_detail.revenue
+from stg__sales_order_detail
 inner join
-    stg_salesorderheader
-    on stg_salesorderdetail.salesorderid = stg_salesorderheader.salesorderid
+    stg__sales_order_header
+    on stg__sales_order_detail.sales_order_id = stg__sales_order_header.sales_order_id

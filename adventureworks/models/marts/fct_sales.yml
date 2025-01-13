@@ -9,13 +9,13 @@ models:
           - not_null
           - unique
 
-      - name: salesorderid
-        description: The natural key of the saleorderheader
+      - name: sales_order_id
+        description: The natural key of the sales_order_header
         data_tests:
           - not_null
 
-      - name: salesorderdetailid
-        description: The natural key of the salesorderdetail
+      - name: sales_order_detail_id
+        description: The natural key of the sales_order_detail
         data_tests:
           - not_null
 
@@ -34,8 +34,8 @@ models:
         data_tests:
           - not_null
 
-      - name: creditcard_key
-        description: The foreign key of the creditcard. If no creditcard exists, it was assumed that purchase was made in cash.
+      - name: credit_card_key
+        description: The foreign key of the credit_card. If no credit_card exists, it was assumed that purchase was made in cash.
         test:
           - not_null
 
@@ -49,12 +49,12 @@ models:
         data_tests:
           - not_null
 
-      - name: unitprice
+      - name: unit_price
         description: The unit price of the product
         data_tests:
           - not_null
 
-      - name: orderqty
+      - name: order_qty
         description: The quantity of the product
         data_tests:
           - not_null

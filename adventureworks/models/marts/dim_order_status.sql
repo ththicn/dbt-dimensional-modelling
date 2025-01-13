@@ -1,10 +1,10 @@
 with
-    stg_order_status as (
-        select distinct status as order_status from {{ ref("salesorderheader") }}
+    stg__order_status as (
+        select distinct status as order_status from {{ ref("sales_order_header") }}
     )
 
 select
-    {{ dbt_utils.generate_surrogate_key(["stg_order_status.order_status"]) }}
+    {{ dbt_utils.generate_surrogate_key(["stg__order_status.order_status"]) }}
     as order_status_key,
     order_status,
     case
@@ -13,7 +13,7 @@ select
         when order_status = 2
         then 'approved'
         when order_status = 3
-        then 'backordered'
+        then 'back_ordered'
         when order_status = 4
         then 'rejected'
         when order_status = 5
@@ -22,4 +22,4 @@ select
         then 'cancelled'
         else 'no_status'
     end as order_status_name
-from stg_order_status
+from stg__order_status

@@ -9,18 +9,18 @@ models:
           - unique
           - not_null
 
-      - name: customerid
+      - name: customer_id
         description: The natural key of the customer
         data_tests:
           - not_null
           - unique
 
-      - name: fullname
+      - name: full_name
         description: The customer name. Adopted as customer_fullname when person name is not null.
 
-      - name: businessentityid
+      - name: business_entity_id
 
-      - name: storebusinessentityid
+      - name: store_business_entity_id
 
       - name: storename
         description: The store name.

@@ -1,19 +1,20 @@
 with
-    stg_address as (select * from {{ ref("address") }}),
+    stg__address as (select * from {{ ref("address") }}),
 
-    stg_stateprovince as (select * from {{ ref("stateprovince") }}),
+    stg__state_province as (select * from {{ ref("state_province") }}),
 
-    stg_countryregion as (select * from {{ ref("countryregion") }})
+    stg__country_region as (select * from {{ ref("country_region") }})
 
 select
-    {{ dbt_utils.generate_surrogate_key(["stg_address.addressid"]) }} as address_key,
-    stg_address.addressid,
-    stg_address.city as city_name,
-    stg_stateprovince.name as state_name,
-    stg_countryregion.name as country_name
-from stg_address
+    {{ dbt_utils.generate_surrogate_key(["stg__address.address_id"]) }} as address_key,
+    stg__address.address_id,
+    stg__address.city as city_name,
+    stg__state_province.name as state_name,
+    stg__country_region.name as country_name
+from stg__address
 left join
-    stg_stateprovince on stg_address.stateprovinceid = stg_stateprovince.stateprovinceid
+    stg__state_province
+    on stg__address.state_province_id = stg__state_province.state_province_id
 left join
-    stg_countryregion
-    on stg_stateprovince.countryregioncode = stg_countryregion.countryregioncode
+    stg__country_region
+    on stg__state_province.country_region_code = stg__country_region.country_region_code
