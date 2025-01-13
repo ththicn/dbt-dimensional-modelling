@@ -22,6 +22,6 @@
             ]
         }
     },
-    "postStartCommand": "gcloud auth application-default login",
+    "postStartCommand": "/workspaces/dbt-dimensional-modelling/.devcontainer/init.sh",
     "remoteUser": "root"
 }
