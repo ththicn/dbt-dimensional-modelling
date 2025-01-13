@@ -4,7 +4,7 @@ FROM python:3.12-slim
 WORKDIR /workspaces
 
 ENV PATH=$PATH:/workspaces/google-cloud-sdk/bin
-ENV DBT_PROFILES_DIR=/workspaces/dbt-dimensional-modelling/adventureworks
+ENV DBT_PROFILES_DIR=/workspaces/dbt-dimensional-modelling/adventure_works
 
 # 必要なパッケージのインストール
 RUN apt-get update && apt-get install -y --no-install-recommends \
