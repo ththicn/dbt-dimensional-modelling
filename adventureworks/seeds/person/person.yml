@@ -5,13 +5,13 @@ seeds:
     config:
       schema: person
       column_types:
-        businessentityid: integer
+        business_entity_id: integer
         title: string
-        firstname: string
-        middlename: string
-        lastname: string
-        namestyle: boolean
+        first_name: string
+        middle_name: string
+        last_name: string
+        name_style: boolean
         suffix: string
-        modifieddate: timestamp
-        rowguid: string
-        emailpromotion: integer
+        modified_date: timestamp
+        row_guid: string
+        email_promotion: integer

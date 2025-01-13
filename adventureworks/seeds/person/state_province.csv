@@ -1,4 +1,4 @@
-stateprovinceid,countryregioncode,modifieddate,rowguid,name,territoryid,isonlystateprovinceflag,stateprovincecode
+state_province_id,country_region_code,modified_date,row_guid,name,territory_id,is_only_state_province_flag,state_province_code
 1,CA,2014-02-08 10:17:21.587,298c2880-ab1c-4982-a5ad-a36eb4ba0d34,Alberta,6,f,AB 
 2,US,2014-02-08 10:17:21.587,5b7b8462-a888-4e0b-a3e1-7278f8af107e,Alaska,1,f,AK 
 3,US,2014-02-08 10:17:21.587,41b328be-21ae-45d0-841d-6f8dd71ce626,Alabama,5,f,AL 

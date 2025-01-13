@@ -1,4 +1,4 @@
-addressid,addressline1,addressline2,city,stateprovinceid,postalcode,spatiallocation,rowguid,modifieddate
+address_id,address_line1,address_line2,city,state_province_id,postal_code,spatial_location,row_guid,modified_date
 1,1970 Napa Ct.,,Bothell,79,98011,E6100000010CAE8BFC28BCE4474067A89189898A5EC0,9aadcb0d-36cf-483f-84d8-585c2d4ec6e9,2007-12-04 00:00:00
 2,9833 Mt. Dias Blv.,,Bothell,79,98011,E6100000010CD6FA851AE6D74740BC262A0A03905EC0,32a54b9e-e034-4bfb-b573-a71cde60d8c0,2008-11-30 00:00:00
 4,9539 Glenside Dr,,Bothell,79,98011,E6100000010C813A0D5F9FDE474011A5C28A7C955EC0,e5946c78-4bcc-477f-9fa1-cc09de16a880,2009-02-03 00:00:00

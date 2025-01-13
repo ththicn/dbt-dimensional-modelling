@@ -5,12 +5,12 @@ seeds:
     config:
       schema: person
       column_types:
-        addressid: integer
-        stateprovinceid: integer
+        address_id: integer
+        state_province_id: integer
         city: string
-        addressline2: string
-        modifieddate: timestamp
-        rowguid: string
-        postalcode: string
-        spatiallocation: string
-        addressline1: string
+        address_line2: string
+        modified_date: timestamp
+        row_guid: string
+        postal_code: string
+        spatial_location: string
+        address_line1: string
