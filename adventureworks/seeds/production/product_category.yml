@@ -1,10 +1,10 @@
 version: 2
 
 seeds:
-  - name: productcategory
+  - name: product_category
     config:
       schema: production
       column_types:
-        productcategoryid: integer
+        product_category_id: integer
         name: string
-        modifieddate: timestamp
+        modified_date: timestamp

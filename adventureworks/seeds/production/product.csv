@@ -1,4 +1,4 @@
-productid,name,safetystocklevel,finishedgoodsflag,class,makeflag,productnumber,reorderpoint,modifieddate,rowguid,productmodelid,weightunitmeasurecode,standardcost,productsubcategoryid,listprice,daystomanufacture,productline,color,sellstartdate,weight
+product_id,name,safety_stock_level,finished_goods_flag,class,make_flag,product_number,reorder_point,modified_date,row_guid,product_model_id,weight_unit_measure_code,standard_cost,product_subcategory_id,list_price,days_to_manufacture,product_line,color,sell_start_date,weight
 1,Adjustable Race,1000,f,,f,AR-5381,750,2014-02-08 10:01:36.827,694215b7-08f7-4c0d-acb1-d734ba44c0c8,,,0,,0,0,,,2008-04-30 00:00:00,
 2,Bearing Ball,1000,f,,f,BA-8327,750,2014-02-08 10:01:36.827,58ae3c20-4f3a-4749-a7d4-d568806cc537,,,0,,0,0,,,2008-04-30 00:00:00,
 3,BB Ball Bearing,800,f,,t,BE-2349,600,2014-02-08 10:01:36.827,9c21aed2-5bfa-4f18-bcb8-f11638dc2e4e,,,0,,0,1,,,2008-04-30 00:00:00,

@@ -5,23 +5,23 @@ seeds:
     config:
       schema: production
       column_types:
-        productid: integer
+        product_id: integer
         name: string
-        safetystocklevel: integer
-        finishedgoodsflag: boolean
+        safety_stock_level: integer
+        finished_goods_flag: boolean
         class: string
-        makeflag: boolean
-        productnumber: string
-        reorderpoint: integer
-        modifieddate: timestamp
-        rowguid: string
-        productmodelid: integer
-        weightunitmeasurecode: string
-        standardcost: numeric
-        productsubcategoryid: integer
-        listprice: numeric
-        daystomanufacture: integer
-        productline: string
+        make_flag: boolean
+        product_number: string
+        reorder_point: integer
+        modified_date: timestamp
+        row_guid: string
+        product_model_id: integer
+        weight_unit_measure_code: string
+        standard_cost: numeric
+        product_subcategory_id: integer
+        list_price: numeric
+        days_to_manufacture: integer
+        product_line: string
         color: string
-        sellstartdate: timestamp
+        sell_start_date: timestamp
         weight: numeric
