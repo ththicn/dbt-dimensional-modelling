@@ -1,0 +1,16 @@
+version: 2
+
+seeds:
+  - name: address
+    config:
+      schema: person
+      column_types:
+        address_id: integer
+        state_province_id: integer
+        city: string
+        address_line2: string
+        modified_date: timestamp
+        row_guid: string
+        postal_code: string
+        spatial_location: string
+        address_line1: string

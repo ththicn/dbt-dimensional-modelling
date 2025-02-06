@@ -1,0 +1,9 @@
+adventure_works:
+  target: bigquery
+  outputs:
+    bigquery:
+      type: bigquery
+      method: oauth
+      project: ththicn-dev
+      dataset: adventure_works
+      threads: 1

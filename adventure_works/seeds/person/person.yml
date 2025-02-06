@@ -1,0 +1,17 @@
+version: 2
+
+seeds:
+  - name: person
+    config:
+      schema: person
+      column_types:
+        business_entity_id: integer
+        title: string
+        first_name: string
+        middle_name: string
+        last_name: string
+        name_style: boolean
+        suffix: string
+        modified_date: timestamp
+        row_guid: string
+        email_promotion: integer

@@ -1,0 +1,27 @@
+version: 2
+
+seeds:
+  - name: product
+    config:
+      schema: production
+      column_types:
+        product_id: integer
+        name: string
+        safety_stock_level: integer
+        finished_goods_flag: boolean
+        class: string
+        make_flag: boolean
+        product_number: string
+        reorder_point: integer
+        modified_date: timestamp
+        row_guid: string
+        product_model_id: integer
+        weight_unit_measure_code: string
+        standard_cost: numeric
+        product_subcategory_id: integer
+        list_price: numeric
+        days_to_manufacture: integer
+        product_line: string
+        color: string
+        sell_start_date: timestamp
+        weight: numeric

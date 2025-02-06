@@ -1,0 +1,13 @@
+version: 2
+
+seeds:
+  - name: credit_card
+    config:
+      schema: sales
+      column_types:
+        credit_card_id: integer
+        card_type: string
+        exp_year: integer
+        modified_date: datetime
+        exp_month: integer
+        card_number: string

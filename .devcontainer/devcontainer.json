@@ -1,0 +1,27 @@
+{
+    "name": "dbt Dev Container",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "files.associations": {
+                    "*.sql": "jinja-sql"
+                },
+                "[jinja-sql]": {
+                    "editor.defaultFormatter": "innoverio.vscode-dbt-power-user",
+                    "editor.formatOnSave": true
+                }
+            },
+            "extensions": [
+                "innoverio.vscode-dbt-power-user",
+                "docsmsft.docs-yaml",
+                "streetsidesoftware.code-spell-checker",
+                "shardulm94.trailing-spaces",
+                "github.copilot",
+                "github.copilot-chat"
+            ]
+        }
+    },
+    "postStartCommand": "/workspaces/dbt-dimensional-modelling/.devcontainer/init.sh",
+    "remoteUser": "root"
+}
